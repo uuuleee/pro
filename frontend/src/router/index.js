@@ -4,17 +4,17 @@ import About from '../components/About.vue';
 import Contact from '../components/Contact.vue';
 import Feedback from '../components/Feedback.vue';
 import Help from '../components/Help.vue';
-import Signup from '../components/Signup.vue';
 import Signin from '../components/Signin.vue';
+import Search from '../components/Search.vue';
 import Collect from '../components/Collect.vue';
 import History from '../components/History.vue';
 import Community from '../components/Community.vue';
 // 定义路由配置数组
-const routes = [//vue3路由器链接更改路径，但路由器视图不更改 咋回事 搜索
+const routes = [
     {
-        path: '/',          // 路径为根路径 '/'
-        name: 'home',       // 路由的名称，可以在程序中引用
-        component: Home     // 对应的组件为 Home.vue
+        path: '/',
+        name: 'home',
+        component: Home
     },
     {
         path: '/about',
@@ -37,14 +37,15 @@ const routes = [//vue3路由器链接更改路径，但路由器视图不更改 
         component: Help
     },
     {
-        path: '/signup',
-        name: 'signup',
-        component: Signup
-    },
-    {
         path: '/signin',
         name: 'signin',
         component: Signin
+    },
+    {
+        path: '/search',
+        name: 'search',
+        component: Search,
+        props: true
     },
     {
         path: '/collect',
@@ -60,7 +61,8 @@ const routes = [//vue3路由器链接更改路径，但路由器视图不更改 
         path: '/community',
         name: 'community',
         component: Community
-    }
+    },
+
 ];
 
 // 创建路由器实例
